@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Kami | dr. Alini</title>
+
+  <!-- Font dan Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset dan dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: rgb(210, 208, 206);
+      color: #333;
+    }
+
+    header {
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    header nav .choosen{
+      text-decoration: underline;
+      color: blue;
+      margin-left: 20px;
+      font-weight: bolder;
+      text-decoration-thickness: 3px;
+    }
+
+
+    /* Judul halaman */
+    .page-header {
+      text-align: center;
+      background-color: #f8f9fb;
+      padding: 60px 10%;
+    }
+
+    .page-header h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .page-header p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    /* Map */
+    .map-container {
+      width: 90%;
+      height: 400px;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Kontak Section */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      padding: 60px 10%;
+      background-color: rgb(210, 208, 206);
+      flex-wrap: wrap;
+    }
+
+    /* Bagian kiri (informasi) */
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+
+    .info-item i {
+      font-size: 24px;
+      color: #007bff;
+      margin-right: 15px;
+      background-color: #e8f0fe;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .info-text h4 {
+      margin: 0 0 5px;
+      color: #222;
+    }
+
+    .info-text p {
+      margin: 0;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* Bagian kanan (form) */
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+      background-color: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .content {
+      margin-top: 80px;
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      line-height: 1.5;
+      position: relative;
+      font-size: 20px;
+    }
+
+    .content h1 {
+      color: #444;
+      text-align: center;
+    }
+
+    .content h4 {
+      color: rgb(210, 208, 206);
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: gray;
+      text-decoration-thickness: 4px;
+    }
+
+    .content p {
+        color: #555;
+        font-size: 16px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .spec {
+      color: rgb(210, 208, 206);
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: blue;
+      text-decoration-thickness: 4px;
+    }
+
+    .content p {
+        color: #555;
+        font-size: 16px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.jpeg" alt="hm">
+        <nav>
+          <a href="home.html">BERANDA</a>
+          <a href="profile.html">PROFILE DOKTER</a>
+          <a href="layanan.html">LAYANAN & BIAYA</a>
+          <a href="kontak.html" class="choosen">KONTAK KAMI</a>
+        </nav>
+      </header>
+
+      <main class="content">
+        <h1>Kontak Kami</h1>
+        <h4>----<span class="spec">-----</span>----</h4>
+        <p>Apabila ada yang ingin ditanyakan, silakan kirim pesan di bawah ini ya</p>
+      </main>
+
+  <!-- MAP -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.09931649707!2d110.40585058685963!3d-6.985867570155994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4886194b15%3A0x83d5e270f6cc8804!2sApotek%20Usadani!5e0!3m2!1sid!2sid!4v1760234174506!5m2!1sid!2sid" 
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+  </div>
+
+  <!-- KONTAK -->
+  <section class="contact-container">
+    <!-- Informasi Kontak -->
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot" style="border-style: dotted;"></i>
+        <div class="info-text">
+          <h4>Alamat</h4>
+          <p>Jl. Suyudono No.52, Semarang, Jawa Tengah</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-brands fa-whatsapp" style="border-style: dotted;"></i>
+        <div class="info-text">
+          <h4>Whatsapp</h4>
+          <p>+6285727831006</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-envelope" style="border-style: dotted;"></i>
+        <div class="info-text">
+          <h4>Email</h4>
+          <p>halo@dokteralini.com</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-clock" style="border-style: dotted;"></i>
+        <div class="info-text">
+          <h4>Jadwal Praktek</h4>
+          <p>Senin, Rabu, Jumat<br>Pukul 15:30 - 19:00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulir -->
+    <div class="contact-form">
+      <form action="#">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Nama" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+        <textarea name="message" placeholder="Pesan" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

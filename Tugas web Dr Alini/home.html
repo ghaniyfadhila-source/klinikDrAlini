@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landing Page with Header and Left Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    /* Background image */
+    body {
+      background: url(images.jpg) no-repeat center center/cover;
+    }
+
+    /* Overlay with white opacity */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: -1;
+    }
+
+    header {
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    header nav .choosen{
+      text-decoration: underline;
+      color: blue;
+      margin-left: 20px;
+      font-weight: bolder;
+      text-decoration-thickness: 3px;
+    }
+
+
+    .content {
+      margin-top: 80px;
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      line-height: 1.5;
+      position: relative;
+      font-size: 20px;
+    }
+
+    .content h2 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .content p {
+      color: #555;
+      line-height: 1.2;
+      font-size: 20px;
+    }
+
+    .content button {
+      background-color: blue;
+      margin-top: 20px;
+      border-radius: 5px;
+      width: max-content;
+      height: 50px;
+      border-color: blue;
+    }
+
+    .content button p {
+      padding: 11px;
+      font-size: 15px;
+      margin: 0 auto;
+      color: white;
+      font-weight: 500;
+    }
+
+    .content img {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin-top: 160px;
+      margin-right: 100px;
+      float: right;
+      border-radius: 50%;
+    }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Responsif di layar kecil */
+  }
+
+  .card {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertikal tengah */
+    align-items: center;      /* Horizontal tengah */
+    text-align: center;
+  }
+
+  .judul {
+    font-weight: bold;
+    color: #444;
+    font-size: 18px;
+  }
+
+  .gambar {
+    width: 80%;
+    max-width: 250px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .love {
+    width: 10%;
+    max-width: 20px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .red {
+    background-color: rgb(250, 98, 98);
+    color: rgb(250, 98, 98);
+    width: 100%;
+    height: 20px;
+  }
+
+  .rt {
+    color: rgb(189, 51, 51);
+    font-style: italic;
+  }
+
+  .red2 {
+    background-color: rgb(250, 98, 98);
+    color:  rgb(189, 51, 51);
+    width: 100%;
+    height: max-content;
+    font-style: italic;
+    font-size: x-large;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  .left-align {
+    text-align: center;
+    width: 100%;
+  }
+
+  .card2 {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Horizontal tengah */
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <header>
+    <img src="logo.jpeg" alt="hm">
+    <nav>
+      <a href="home.html" class="choosen">BERANDA</a>
+      <a href="profile.html">PROFILE DOKTER</a>
+      <a href="layanan.html">LAYANAN & BIAYA</a>
+      <a href="kontak.html">KONTAK KAMI</a>
+    </nav>
+  </header>
+
+    <main class="content">
+      <p>Praktek dr. Alini Hafiz , SpOG(K)-KFM</p>
+      <h2>APOTEK USADANI</h2>
+      <p>Jalan Suyudono No.52 Semarang, Jawa Tengah</p>
+      <p>Senin, Rabu, Jumat | Jam 15.30 - 19.00</p>
+      <button>
+        <a href="backend.html" style="text-decoration: none;">
+          <p>DAFTAR ONLINE SEKARANG</p>
+        </a>
+      </button>
+      <img src="8.JPG" alt="dokter">
+    </main>
+
+    <div class="container">
+      <!-- Kolom 1 -->
+      <div class="card">
+        <div class="red">-</div>
+        <img src="heart.png" alt="" class="love">
+        <div class="judul">Pengumuman</div>
+          <h1 class="rt">Cuti dr. Alini</h1><br>
+          <img src="nikah.jpg" alt="Cuti dr. Alini" class="gambar"><br>
+          <p style="font-family: cursive; color: blue;">April 2025 – 3 Mei 2025</p><br>
+          <h1 class="red2">Praktek digantikan oleh dr. Dawi, SpOG</h1>
+      </div>
+    
+      <!-- Kolom 2 -->
+      <div class="card">
+        <img src="lebaran.jpeg" alt="Jadwal Ramadhan" class="gambar">
+      </div>
+    
+      <!-- Kolom 3 -->
+      <div class="card">
+        <img src="check-mark.png" alt="check-mark" style="width: 60px; margin-bottom: 10px;">
+        <div class="judul" style="margin-bottom: 5px;">Jadwal di RSUP Dr. Kariadi</div>
+        <div class="teks center-align">
+          <b>Poliklinik Paviliun Merpati:</b><br>
+          Selasa: 12.00–14.00<br>
+          Rabu: 10.00–12.00<br>
+          Jumat: 10.00–12.00<br><br>
+    
+          <b>Poliklinik Paviliun Garuda:</b><br>
+          Senin: 10.00–11.00<br>
+          Rabu: 08.00–09.00<br>
+          Kamis: 12.00–13.00<br><br>
+    
+          <a href="backend.html" class="btn">Daftar Online</a><br><br>
+    
+          <b><span style="color: red;">*</span> Cara Mendaftar:</b><br>
+          Pilih Pembiayaan → Pasien Lama/Baru → Dokter Alini → Tekan tombol “Cari”<br><br>
+        </div>
+      </div>
+      <div class="card2">
+        <img src="hospital.png" alt="check-mark" style="width: 60px; margin-bottom: 10px;">
+        <div class="teks center-align">
+          <p>Pasien dengan keluhan 
+            <b>perdarahan, ketuban pecah, nyeri perut hebat,</b>
+            hamil dengan <b>tensi tinggi, mendekati/melewati HPL</b>
+            dapat langsung datang ke tempat praktek tanpa perjanjian.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+  </div>
+</body>
+</html>

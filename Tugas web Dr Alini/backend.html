@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Antrian Online</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url(backend.jpeg) no-repeat;
+      background-size: 40%;
+      background-position-x: center;
+      background-position-y: 30px;
+    }
+
+    .topimg {
+      margin: 0 auto;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 40px 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 90%;
+      margin-top: 500px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #3b5bdb;
+      outline: none;
+      box-shadow: 0 0 3px rgba(59,91,219,0.3);
+    }
+
+    .note {
+      font-size: 13px;
+      color: #3b5bdb;
+      margin-top: -10px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #3b5bdb;
+      color: white;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #2f49b5;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-size: 0;
+        padding: 20px;
+      }
+      .form-container {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <a href="home.html" style="text-decoration: none; color: gray; position: relative; margin-bottom: 100px;">x</a>
+    <form action="home.html">
+      
+      <h2>Daftar Antrian Online</h2>
+
+      <label for="tanggal">Tanggal Periksa</label>
+      <input type="date" id="tanggal" name="tanggal" placeholder="dd/mm/yyyy" required>
+      <p class="note">Silakan pilih hari <b>Senin, Rabu & Jum'at.</b></p>
+
+      <label for="sesi">Pilih Sesi</label>
+      <select id="sesi" name="sesi" required>
+        <option value="">-- Pilih Sesi --</option>
+        <option>Jam 15.30 - 16.30 (sisa kuota : 0)</option>
+        <option>Jam 16.30 - 17.30 (sisa kuota : 2)</option>
+        <option>Jam 17.30 - 18.30 (sisa kuota : 5)</option>
+      </select>
+
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+
+      <label for="telepon">No. Telepon / Whatsapp</label>
+      <input type="number" id="telepon" name="telepon" placeholder="Contoh: 081234567890" required>
+
+      <label for="alamat">Alamat</label>
+      <textarea id="alamat" name="alamat" rows="2" placeholder="Masukkan alamat lengkap" required></textarea>
+
+      <label for="keluhan">Keluhan</label>
+      <textarea id="keluhan" name="keluhan" rows="2" placeholder="Tulis keluhan Anda" required></textarea>
+
+      <button type="submit">Daftar sekarang</button>
+    </form>
+  </div>
+
+</body>
+</html>

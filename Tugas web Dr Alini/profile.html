@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    /* Background image */
+    body {
+      background-color: rgb(210, 208, 206);
+    }
+
+    header {
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+    header img {
+      height: 40px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    header nav .choosen{
+      text-decoration: underline;
+      color: blue;
+      margin-left: 20px;
+      font-weight: bolder;
+      text-decoration-thickness: 3px;
+    }
+
+    .content {
+      margin-top: 80px;
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      line-height: 1.5;
+      position: relative;
+      font-size: 20px;
+    }
+
+    .content h1 {
+      color: #444;
+      text-align: center;
+    }
+
+    .content h4 {
+      color: rgb(210, 208, 206);
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: gray;
+      text-decoration-thickness: 4px;
+    }
+
+    .content p {
+        color: #555;
+        font-size: 16px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .spec {
+      color: rgb(210, 208, 206);
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: blue;
+      text-decoration-thickness: 4px;
+    }
+
+    .profile-container {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-image img {
+  width: 220px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.profile-text {
+  text-align: left;
+  margin-left: 30px;
+}
+
+.profile-text h2 {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.profile-text p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .card {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .card img {
+   width: 300px;
+   height: 300px;
+  }
+
+  .card2 {
+    margin-top: 5px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .card2 img {
+   width: 300px;
+   height: 250px;
+  }
+    </style>
+</head>
+<body>
+    <header>
+      <img src="logo.jpeg" alt="hm">
+      <nav>
+        <a href="home.html">BERANDA</a>
+        <a href="profile.html" class="choosen">PROFILE DOKTER</a>
+        <a href="layanan.html">LAYANAN & BIAYA</a>
+        <a href="kontak.html">KONTAK KAMI</a>
+      </nav>
+    </header>
+
+    <main class="content">
+        <h1>Profile Dokter Alini Hafiz</h1>
+        <h4>-------<span class="spec">--------</span>-------</h4>
+        <br><br>
+        <div class="profile-container">
+            <div class="profile-image">
+              <img src="dokter.JPG" alt="Foto Dokter Alini Hafiz">
+            </div>
+        
+            <div class="profile-text">
+              <h2>Dr. Alini Hafiz, SpOG(K)-KFM</h2>
+              <p>Menyelesaikan pendidikan dokter umum dan spesialis Obstetri dan Ginekologi Fakultas Kedokteran Universitas Diponegoro.</p>
+              <p>Dokter Alini melanjutkan subspesialis Fetomaternal di universitas yang sama.</p>
+              <p>Dokter Alini saat ini bertugas sebagai staff pengajar di Fakultas Kedokteran UNDIP dan staff fungsional divisi fetomaternal SMF Obstetri dan Ginekologi Rumah Sakit Kariadi, Semarang.</p>
+              <p>Untuk meningkatkan skill dan keilmuan, saat ini dokter Alini masih aktif mengikuti pelatihan dan simposium baik secara offline maupun online.</p>
+            </div>
+          </div>
+        <br><br>
+        <h1>Gallery</h1>
+        <h4>-------<span class="spec">------</span>-------</h4>
+        <p>Dokumentasi dari kegiatan rumah sakit maupun yang lainnya</p>
+    </main>
+
+    <div class="container">
+      <div class="card">
+        <img src="1.JPG" alt="1">
+        <img src="2.JPG" alt="2">
+        <img src="3.JPG" alt="3">
+        <img src="4.JPG" alt="4">
+      </div>
+    </div>
+    <div class="container">
+      <div class="card2">
+        <img src="5.JPG" alt="5">
+        <img src="6.JPG" alt="6">
+        <img src="7.JPG" alt="7">
+        <img src="8.JPG" alt="8">
+      </div>
+    </div>
+</body>
+</html>
